@@ -1,6 +1,6 @@
 ---
 
-## MP_ChatSystem - Multiplayer Chat System Plugin for Unreal Engine
+# MP_ChatSystem - Multiplayer Chat System Plugin for Unreal Engine
 
 MP_ChatSystem is a powerful, efficient, and modular multiplayer chat system built for Unreal Engine.
 Supports Global, Team, Party, and Private (DM) channels with a room-based design and highly optimized message replication — ideal for both Listen Server and Dedicated Server projects, it's Scalable, extendable, and open-source.
