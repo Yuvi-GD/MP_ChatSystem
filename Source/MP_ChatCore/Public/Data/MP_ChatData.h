@@ -1,41 +1,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-//#include "Engine/NetSerialization.h"
 #include "Net/Serialization/FastArraySerializer.h"
 #include "Data/MP_ChatChannelTypes.h"
 #include "MP_ChatData.generated.h"
 
-///**
-// * A unique key identifying a chat room.
-// */
-//USTRUCT(BlueprintType)
-//struct FMP_ChatRoomKey
-//{
-//    GENERATED_BODY()
-//
-//    /**
-//     * Unique Room ID (e.g. GUID or hashed string).
-//     */
-//    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MP_Chat|ChatRoomKey")
-//    FString RoomID;
-//
-//    /**
-//     * Which channel this room represents.
-//     */
-//    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MP_Chat|ChatRoomKey")
-//    EMP_ChatChannel Channel;
-//
-//    // Default constructor
-//    FMP_ChatRoomKey()
-//        : RoomID(TEXT(""))
-//        , Channel(EMP_ChatChannel::Global)
-//    {
-//    }
-//};
-
 /**
- * Describes per-room settings.
+ * FMP_ChatRoomDesc
+ * Describes a chat room, including its ID, name, channel type, and settings.
+ * This is used to create or configure chat rooms in the system.
  */
 USTRUCT(BlueprintType)
 struct FMP_ChatRoomDesc
@@ -119,6 +92,7 @@ struct FMP_ChatMessage : public FFastArraySerializerItem
 	// NetSerialize for efficient network replication for FastArray items.
     bool NetSerialize(FArchive& Ar, class UPackageMap* Map, bool& bOutSuccess);
     
+	// Custom equality check for FastArray items.
     bool Identical(const FMP_ChatMessage* Other, uint32 PortFlags) const
     {
         if (!Other) return false;
