@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Data/MP_ChatData.h"
 #include "UObject/Interface.h"
 #include "MP_Chat_PlayerController_I.generated.h"
 

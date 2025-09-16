@@ -62,9 +62,9 @@ UNetReplicationGraphConnection* UMP_ChatRepGraph::FindConnection(APlayerControll
     {
         if (Conn && Conn->NetConnection == PC->GetNetConnection())
         {
-            return Conn;
             UE_LOG(LogTemp, Warning, TEXT("MP_ChatRepGraph:: RepGraph connection: %s (%s)"),
             *GetNameSafe(Conn), *GetNameSafe(Conn ? Conn->NetConnection : nullptr));
+            return Conn;
         }
     }
     return nullptr;

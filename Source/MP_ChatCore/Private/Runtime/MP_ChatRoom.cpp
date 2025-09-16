@@ -22,7 +22,11 @@ AMP_ChatRoom::AMP_ChatRoom()
     // Prevent movement replication (optional)
     SetReplicateMovement(false);
 
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION < 4
     NetUpdateFrequency = 0.01f; // Very low; ForceNetUpdate used for instant updates
+#else
+    SetNetUpdateFrequency(0.01f); // UE 5.4+ API
+#endif
 
     // Initialize root
     USceneComponent* Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
@@ -173,7 +177,6 @@ bool AMP_ChatRoom::DeleteChatMessage(int32 MsgIndex)
         ForceNetUpdate();
     }
     return bDeleted;
-    return false;
 }
 
 TArray<FMP_ChatMessage> AMP_ChatRoom::GetRoomChatMessage()
