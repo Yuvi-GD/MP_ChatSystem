@@ -134,7 +134,7 @@ bool AMP_ChatRoom::AddSubscriber(const FString& PlayerID)
 
 bool AMP_ChatRoom::RemoveSubscriber(const FString& PlayerID)
 {
-    if (SubscribedPlayerIDs.Remove(PlayerID) > 0)
+    if (SubscribedPlayerIDs.Remove(PlayerID))
     {
         ForceNetUpdate();
         // Destroy/dormant logic handled by manager/outside this class for now
