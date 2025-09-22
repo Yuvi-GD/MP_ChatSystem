@@ -2,7 +2,9 @@
 // Path: Plugins/MP_ChatSystem/Source/MP_ChatCore/Private/Runtime/AMP_ChatRoom.cpp
 
 #include "Runtime/MP_ChatRoom.h"
+#include "Runtime/Launch/Resources/Version.h"
 #include "Net/UnrealNetwork.h"
+#include "GameFramework/Actor.h"
 #include "Interfaces/MP_Chat_PlayerController_I.h"
 
 AMP_ChatRoom::AMP_ChatRoom()

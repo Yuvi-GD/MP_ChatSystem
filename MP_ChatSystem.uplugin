@@ -26,10 +26,6 @@
 		{
 			"Name": "ReplicationGraph",
 			"Enabled": true
-		},
-		{
-			"Name": "MP_Interface",
-			"Enabled": true
 		}
 	]
 }
