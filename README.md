@@ -114,20 +114,47 @@ git clone https://github.com/Yuvi-GD/MP_ChatSystem.git
 ## 🤝 Contributing  
 We welcome all contributions to help improve and expand **MP_ChatSystem**! Whether it's **bug fixes, feature enhancements, documentation improvements, or performance optimizations**, we'd love to have your input.  
 
-### **How to Contribute**  
-To keep all improvements within this main repository and prevent fragmented forks, follow these steps:  
+### 🛠️ How to Contribute
 
-1️⃣ **Clone the repository** → `git clone https://github.com/Yuvi-GD/MP_ChatSystem.git`  
-2️⃣ **Create a new branch** → `git checkout -b feature-name`  
-3️⃣ **Make your changes and commit** → `git commit -m "Description of changes"`  
-4️⃣ **Push to the main repo** → `git push origin feature-name`  
-5️⃣ **Open a Pull Request (PR)** in this repository.  
+If you're new to open-source, here's the standard workflow:
 
-### **Guidelines for Contributors**  
-✔ **Work inside this repo** instead of forking—our goal is collaborative development.  
-✔ **Use feature branches** for all new changes to keep `main` stable.  
-✔ **Discuss major changes in Issues or Discussions** before making PRs.  
-✔ **Write clear commit messages** and document your changes properly.  
+1. **Fork this repository**  
+   Click the `Fork` button at the top-right to create your own copy.
+
+2. **Clone your fork locally**
+   ```bash
+   # Clone your fork (Don't Forget to Change 'your-username' with your github username in URL)
+   git clone https://github.com/your-username/MP_ChatSystem.git
+   cd MP_ChatSystem
+   ```
+
+3. **Create a new branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+4. **Make your changes**  
+   Add your improvements, fix bugs, or update documentation.
+
+5. **Commit and push**
+   ```bash
+   git add .
+   git commit -m "Describe your changes"
+   git push origin feature/your-feature-name
+   ```
+
+6. **Open a Pull Request (PR)**  
+   Go to your fork on GitHub and click **Compare & Pull Request**. Describe your changes clearly.
+
+---
+
+### ✅ Contribution Guidelines
+
+- Use **feature branches** to keep your fork’s `main` branch clean and synced.
+- Write **clear commit messages** and document your changes.
+- For major changes, open an **Issue or Discussion** first.
+- Be respectful and collaborative—feedback is part of the process!
+
 
 ---
 
